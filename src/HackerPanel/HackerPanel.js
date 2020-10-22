@@ -4,7 +4,7 @@ const HackerPanel = () => {
   const [data, setData] = useState([]);
   // fetch data
   const loadData = async () => {
-    const loggedKeys = await fetch("http://localhost:8080/css-keylogger/keys");
+    const loggedKeys = await fetch("https://security-check-playground.herokuapp.com/css-keylogger/keys");
     const loggedKeysJson = await loggedKeys.json();
     setData(loggedKeysJson);
   };
